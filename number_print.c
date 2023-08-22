@@ -12,7 +12,7 @@ unsigned int *tab, num;
 int i = 0, sum = 0, r = 0;
 if (x == 0)
 {
-putchar('0');
+_putchar('0');
 return (1);
 }
 num = x;
@@ -33,7 +33,7 @@ i++;
 }
 for (i = r - 1; i >= 0; i--)
 {
-putchar('0' + tab[i]);
+_putchar('0' + tab[i]);
 sum++;
 }
 free(tab);
@@ -103,7 +103,7 @@ moins = 1;
 x *= -1;
 }
 num = x;
-r = lenght_num(num);
+r = calculate_lenght(num);
 tab = (int *)malloc(sizeof(int) * r);
 while (num > 0)
 {
@@ -111,7 +111,7 @@ tab[i] = num % 10;
 num /= 10;
 i++;
 }
-sum = print_this_number(tab, moins, r);
+sum = number_printing(tab, moins, r);
 free(tab);
 return (sum);
 }
