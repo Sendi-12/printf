@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 			if (format[x] == 'd' || format[x] == 'i')
 			{
 				x++;
-				sum += num_integer(va_arg(lest, int));
+				sum += number_integer(va_arg(lest, int));
 			}
 			if (format[x] == '%')
 			{
